@@ -193,7 +193,7 @@ function drawMiniCalendar(
       d.getMonth() === highlightDay.getMonth();
 
     if (isToday) {
-      doc.setFillColor(20);
+      doc.setFillColor(20, 20, 20);
       doc.circle(cx, cy - 1.4, 1.8, "F");
       doc.setTextColor(255);
       doc.setFont("helvetica", "bold");
