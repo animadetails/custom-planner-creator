@@ -18,9 +18,10 @@ export type AgendaOptions = {
   includeWeekends: boolean;
 };
 
-// Half letter portrait: 5.5in x 8.5in => 139.7mm x 215.9mm
-const PAGE_W = 139.7;
-const PAGE_H = 215.9;
+// Half letter landscape: 8.5in x 5.5in => 215.9mm x 139.7mm
+// (media hoja carta horizontal: una hoja carta 11x8.5" partida en 2)
+const PAGE_W = 215.9;
+const PAGE_H = 139.7;
 const MARGIN_X = 14;
 const MARGIN_TOP = 16;
 const MARGIN_BOTTOM = 14;
@@ -186,7 +187,7 @@ export async function generateAgendaPDF(opts: AgendaOptions): Promise<Blob> {
   const doc = new jsPDF({
     unit: "mm",
     format: [PAGE_W, PAGE_H],
-    orientation: "portrait",
+    orientation: "landscape",
   });
 
   // Cover
