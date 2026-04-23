@@ -187,7 +187,7 @@ export async function generateAgendaPDF(opts: AgendaOptions): Promise<Blob> {
   const doc = new jsPDF({
     unit: "mm",
     format: [PAGE_W, PAGE_H],
-    orientation: "portrait",
+    orientation: "landscape",
   });
 
   // Cover
